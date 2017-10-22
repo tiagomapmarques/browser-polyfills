@@ -1,0 +1,21 @@
+{
+  "name": "browser-polyfills",
+  "version": "0.1.0",
+  "description": "Fetch and Promise polyfills for the browser",
+  "main": "./lib/index.js",
+  "scripts": {
+    "build": "tsc -p ./tsconfig.json"
+  },
+  "author": "Tiago Marques",
+  "license": "MIT",
+  "repository": "https://github.com/tiagomapmarques/browser-polyfills",
+  "dependencies": {
+    "promise-polyfill": "~6.0",
+    "setasap": "~2.0",
+    "whatwg-fetch": "~2.0"
+  },
+  "devDependencies": {
+    "@types/promise-polyfill": "~6.0",
+    "typescript": "~2.5"
+  }
+}
