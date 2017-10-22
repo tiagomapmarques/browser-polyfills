@@ -1,2 +1,2 @@
 # browser-polyfills
-Fetch and Promise polyfills for the broswer
+Fetch and Promise polyfills for the browser
