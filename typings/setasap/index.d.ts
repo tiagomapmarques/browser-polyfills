@@ -1,4 +1,5 @@
 
 declare module 'setasap' {
-  export function setImmediate(func: Function): void;
+  let setImmediate: Function;
+  export = setImmediate;
 }
