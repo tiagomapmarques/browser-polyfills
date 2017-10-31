@@ -1,10 +1,16 @@
 
-import 'whatwg-fetch';
-
-import * as Promise from 'promise-polyfill';
+import * as promisePolyfill from 'promise-polyfill';
 import * as setImmediate from 'setasap';
 
-if (!(<any> window).Promise) {
-  (<any> window).Promise = Promise;
-  (<any> Promise)._immediateFn = setImmediate;
+interface WindowWithPromise extends Window {
+  Promise: typeof promisePolyfill | undefined;
 }
+
+declare var window: WindowWithPromise;
+
+if (!window.Promise) {
+  window.Promise = promisePolyfill;
+  window.Promise._immediateFn = setImmediate;
+}
+
+import 'whatwg-fetch';

@@ -1,6 +1,6 @@
 {
   "name": "browser-polyfills",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Fetch and Promise polyfills for the browser",
   "main": "./lib/index.js",
   "scripts": {
@@ -10,7 +10,6 @@
   "license": "MIT",
   "repository": "https://github.com/tiagomapmarques/browser-polyfills",
   "dependencies": {
-    "@types/promise-polyfill": "~6.0",
     "promise-polyfill": "~6.0",
     "setasap": "~2.0",
     "whatwg-fetch": "~2.0"
