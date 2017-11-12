@@ -6,7 +6,7 @@ declare module 'promise-polyfill' {
   }
 
   class Promise<T> implements Thenable<T> {
-    _immediateFn: Function | undefined;
+    static _immediateFn: Function | undefined;
 
     constructor(callback: (resolve : (value?: T | Thenable<T>) => void, reject: (error?: any) => void) => void);
 
@@ -16,7 +16,7 @@ declare module 'promise-polyfill' {
     catch<U>(onRejected?: (error: any) => U | Thenable<U>): Promise<U>;
   }
 
-  var localPromise: Promise<any>;
+  var localPromise: typeof Promise;
 
   export = localPromise;
 }
