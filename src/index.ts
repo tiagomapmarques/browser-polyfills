@@ -1,4 +1,3 @@
-
 import * as promisePolyfill from 'promise-polyfill';
 import * as setImmediate from 'setasap';
 
@@ -15,7 +14,7 @@ if (!window.Promise) {
 
 import 'whatwg-fetch';
 
-const polyFetch: Function = window.fetch;
+const polyFetch = window.fetch;
 const polyPromise: typeof promisePolyfill = window.Promise;
 
 window.fetch = (input, init) => {
@@ -24,4 +23,4 @@ window.fetch = (input, init) => {
   } catch (error) {
     return new polyPromise((_, reject) => reject(error));
   }
-}
+};

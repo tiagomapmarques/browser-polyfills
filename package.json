@@ -1,10 +1,16 @@
 {
   "name": "browser-polyfills",
-  "version": "0.4.0",
+  "version": "1.0.0",
   "description": "Fetch and Promise polyfills for the browser",
   "main": "./lib/index.js",
   "scripts": {
-    "build": "tsc -p ./tsconfig.json"
+    "clean": "rimraf ./lib",
+    "clean:packages": "echo ==== IGNORE THIS NEXT ERROR ==== && rimraf ./node_modules",
+    "build": "npm run clean && tsc -p ./tsconfig.json",
+    "lint": "tslint -p tsconfig.lint.json -c tslint.json -e **/node_modules/**",
+    "packages": "ncu",
+    "packages:write": "ncu -u",
+    "packages:reset": "rimraf package-lock.json && npm run clean:packages"
   },
   "author": "Tiago Marques",
   "license": "MIT",
@@ -15,6 +21,10 @@
     "whatwg-fetch": "~2.0"
   },
   "devDependencies": {
+    "npm-check-updates": "~2.13",
+    "rimraf": "~2.6",
+    "tslint": "~5.8",
+    "tslint-config-standard": "~7.0",
     "typescript": "~2.6"
   }
 }
