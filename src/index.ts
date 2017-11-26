@@ -38,6 +38,7 @@ window.fetch = (input, init) => {
   }
 };
 
-if (!window.requestAnimationFrame) {
+if (!window.requestAnimationFrame || !window.cancelAnimationFrame) {
   window.requestAnimationFrame = rafPolyfill;
+  window.cancelAnimationFrame = rafPolyfill.cancel;
 }
