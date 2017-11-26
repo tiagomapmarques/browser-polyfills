@@ -16,7 +16,7 @@ declare module 'promise-polyfill' {
     catch<U>(onRejected?: (error: any) => U | Thenable<U>): Promise<U>;
   }
 
-  var localPromise: typeof Promise;
+  let localPromise: typeof Promise;
 
   export = localPromise;
 }

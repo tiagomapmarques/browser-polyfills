@@ -1,11 +1,24 @@
+import * as setPolyfill from 'es6-set';
+import * as mapPolyfill from 'es6-map';
 import * as promisePolyfill from 'promise-polyfill';
 import * as setImmediate from 'setasap';
+import * as rafPolyfill from 'raf';
 
 interface WindowWithPromise extends Window {
+  Map: typeof mapPolyfill;
+  Set: typeof setPolyfill;
   Promise: typeof promisePolyfill | undefined;
 }
 
 declare var window: WindowWithPromise;
+
+if (!window.Set) {
+  window.Set = setPolyfill;
+}
+
+if (!window.Map) {
+  window.Map = mapPolyfill;
+}
 
 if (!window.Promise) {
   window.Promise = promisePolyfill;
@@ -24,3 +37,7 @@ window.fetch = (input, init) => {
     return new polyPromise((_, reject) => reject(error));
   }
 };
+
+if (!window.requestAnimationFrame) {
+  window.requestAnimationFrame = rafPolyfill;
+}
