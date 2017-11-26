@@ -16,7 +16,10 @@
   "license": "MIT",
   "repository": "https://github.com/tiagomapmarques/browser-polyfills",
   "dependencies": {
+    "es6-map": "~0.1",
+    "es6-set": "~0.1",
     "promise-polyfill": "~6.0",
+    "raf": "^3.4.0",
     "setasap": "~2.0",
     "whatwg-fetch": "~2.0"
   },
