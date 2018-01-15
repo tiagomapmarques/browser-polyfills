@@ -1,32 +1,38 @@
 {
   "name": "browser-polyfills",
   "version": "1.1.1",
-  "description": "Fetch and Promise polyfills for the browser",
+  "description": "Polyfills for browser applications",
+  "keywords": [
+    "Promise",
+    "fetch",
+    "Map",
+    "Set",
+    "find",
+    "rAF"
+  ],
   "main": "./lib/index.js",
   "scripts": {
-    "clean": "rimraf ./lib",
-    "clean:packages": "echo ==== IGNORE THIS NEXT ERROR ==== && rimraf ./node_modules",
-    "build": "npm run clean && tsc -p ./tsconfig.json",
+    "clean": "rimraf lib",
+    "clean:packages": "echo ==== IGNORE THIS NEXT ERROR ==== && rimraf node_modules",
+    "build": "npm run clean && tsc -p tsconfig.json",
     "lint": "tslint -p tsconfig.lint.json -c tslint.json -e **/node_modules/**",
-    "packages": "ncu",
-    "packages:write": "ncu -u",
-    "packages:reset": "rimraf package-lock.json && npm run clean:packages"
+    "reset": "rimraf package-lock.json && npm run clean:packages"
   },
   "author": "Tiago Marques",
   "license": "MIT",
   "repository": "https://github.com/tiagomapmarques/browser-polyfills",
   "dependencies": {
+    "array.prototype.find": "~2.0",
     "es6-map": "~0.1",
     "es6-set": "~0.1",
-    "promise-polyfill": "~6.0",
+    "promise-polyfill": "~7.0",
     "raf": "~3.4",
     "setasap": "~2.0",
     "whatwg-fetch": "~2.0"
   },
   "devDependencies": {
-    "npm-check-updates": "~2.13",
     "rimraf": "~2.6",
-    "tslint": "~5.8",
+    "tslint": "~5.9",
     "tslint-config-standard": "~7.0",
     "typescript": "~2.6"
   }
