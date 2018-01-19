@@ -1,15 +1,17 @@
 {
   "name": "browser-polyfills",
-  "version": "1.2.1",
+  "version": "1.3.0",
   "description": "Polyfills for browser applications",
   "keywords": [
     "browser",
-    "polyfill",
+    "polyfills",
     "Promise",
     "fetch",
     "Map",
     "Set",
     "find",
+    "findIndex",
+    "values",
     "rAF"
   ],
   "main": "./lib/index.js",
@@ -25,8 +27,10 @@
   "repository": "https://github.com/tiagomapmarques/browser-polyfills",
   "dependencies": {
     "array.prototype.find": "~2.0",
+    "array.prototype.findindex": "~2.0",
     "es6-map": "~0.1",
     "es6-set": "~0.1",
+    "object.values": "~1.0",
     "promise-polyfill": "~6.0",
     "raf": "~3.4",
     "setasap": "~2.0",
