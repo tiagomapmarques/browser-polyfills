@@ -8,6 +8,8 @@ This polyfill contains the following polyfills:
  - `Map`
  - `Set`
  - `Array.find`
+ - `Array.findIndex`
+ - `Object.values`
  - `requestAnimationFrame` (`rAF`)
 
 # How to use
