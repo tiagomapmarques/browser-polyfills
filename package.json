@@ -1,7 +1,7 @@
 {
   "name": "browser-polyfills",
   "version": "1.4.0",
-  "description": "Polyfills for browser applications",
+  "description": "Minimal polyfills for modern browser applications",
   "keywords": [
     "browser",
     "polyfills",
@@ -12,6 +12,7 @@
     "find",
     "findIndex",
     "values",
+    "assign",
     "rAF"
   ],
   "main": "./lib/index.js",

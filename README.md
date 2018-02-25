@@ -1,5 +1,5 @@
 # browser-polyfills
-Polyfills for browser applications
+Minimal polyfills for modern browser applications
 
 # What does it have
 This polyfill contains the following polyfills:
@@ -10,6 +10,7 @@ This polyfill contains the following polyfills:
  - `Array.find`
  - `Array.findIndex`
  - `Object.values`
+ - `Object.assign`
  - `requestAnimationFrame` (`rAF`)
 
 # How to use
