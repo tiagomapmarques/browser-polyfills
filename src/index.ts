@@ -3,6 +3,7 @@ import * as mapPolyfill from 'es6-map';
 import * as arrayFindPolyfill from 'array.prototype.find';
 import * as arrayFindIndexPolyfill from 'array.prototype.findindex';
 import * as objectValuesPolyfill from 'object.values';
+import * as objectAssignPolyfill from 'object.assign';
 import * as promisePolyfill from 'promise-polyfill';
 import * as setImmediate from 'setasap';
 import * as rafPolyfill from 'raf';
@@ -41,6 +42,11 @@ if (!(Array.prototype as any).findIndex) {
 // tslint:disable-next-line:no-any
 if (!(Object as any).values) {
   objectValuesPolyfill.shim();
+}
+
+// tslint:disable-next-line:no-any
+if (!(Object as any).assign) {
+  objectAssignPolyfill.shim();
 }
 
 if (!window.requestAnimationFrame || !window.cancelAnimationFrame) {
