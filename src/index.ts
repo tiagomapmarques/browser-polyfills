@@ -5,8 +5,8 @@ import * as arrayFindIndexPolyfill from 'array.prototype.findindex';
 import * as arrayFromPolyfill from 'array.from';
 import * as objectValuesPolyfill from 'object.values';
 import * as objectAssignPolyfill from 'object.assign';
-import * as promisePolyfill from 'promise-polyfill';
-import * as setImmediate from 'setasap';
+import * as promisePolyfill from 'promise-polyfill/src/polyfill';
+import * as setAsap from 'setasap';
 import * as rafPolyfill from 'raf';
 
 interface WindowWithPromise extends Window {
@@ -27,7 +27,7 @@ if (!window.Map) {
 
 if (!window.Promise) {
   window.Promise = promisePolyfill;
-  window.Promise._immediateFn = setImmediate;
+  window.Promise._immediateFn = setAsap;
 }
 
 // tslint:disable-next-line:no-any
