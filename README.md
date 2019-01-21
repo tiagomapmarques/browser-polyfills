@@ -9,6 +9,7 @@ This polyfill contains the following polyfills:
  - `Set`
  - `Array.find`
  - `Array.findIndex`
+ - `Array.from`
  - `Object.values`
  - `Object.assign`
  - `requestAnimationFrame` (`rAF`)
