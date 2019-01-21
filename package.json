@@ -27,6 +27,7 @@
   "license": "MIT",
   "repository": "https://github.com/tiagomapmarques/browser-polyfills",
   "dependencies": {
+    "array.from": "^1.0",
     "array.prototype.find": "^2.0",
     "array.prototype.findindex": "^2.0",
     "es6-map": "^0.1",
